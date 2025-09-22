@@ -9,7 +9,7 @@ SPACE_SIZE = 50
 BODY_PARTS = 3
 SNAKE_COLOR = "#00FF00"
 FOOD_COLOR = "#FF0000"
-BACKGOUNRD_COLOR = "#000000"
+BACKGOUNRD_COLOR = "#FFFFFF"
 
 class Snake:
     def __init__(self):
@@ -27,9 +27,13 @@ class Snake:
 class Food:
 
     def __init__(self):
+
+        
         
         x = random.randint(0, (GAME_WIDTH/SPACE_SIZE) - 1) * SPACE_SIZE
-        y = random.randint(0, (GAME_WIDTH/SPACE_SIZE) - 1) * SPACE_SIZE
+        y = random.randint(0, (GAME_HEIGHT/SPACE_SIZE) - 1) * SPACE_SIZE
+
+        print(x,y)
 
         self.coordinates = [x,y]
 
